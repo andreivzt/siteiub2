@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O colecție de amintiri prețioase.">
+    <title>Pentru Iubirea Mea</title>
+    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Overlay pentru invitatia la date -->
+    <div id="surprise-overlay" class="surprise-overlay hidden" data-nosnippet="true">
+        <div class="surprise-content invitation-card">
+            <h1 class="love-text">Date!!!!</h1>
+            <div class="invitation-details">
+                <p class="love-subtext">Doar noi doi</p>
+                <p class="date-highlight">📅 Data: 26 Februarie 2026</p>
+                <p class="date-highlight">⏰ Ora : 13:00</p>
+                <p class="date-highlight">🌎 Locatia : Cinema si casa vranceana</p>
+                <p class="plan-text">Cele mai bune locuri rezervate</p>
+                <p class="plan-text">Ce zici? ❤️</p>
+            </div>
+            <button id="close-surprise" class="btn">Da normal!!!</button>
+        </div>
+        <div id="hearts-container"></div>
+    </div>
+
+    <div class="main-container">
+        <!-- Scrisoarea / Invitatia -->
+        <button id="magic-btn" class="magic-btn" title="Deschide scrisoarea!">💌</button>
+
+        <div class="book-container">
+            <div class="book" id="book">
+
+                <!-- Foaia 1 : Coperta Față / Interior Copertă -->
+                <div class="page" id="leaf1">
+                    <div class="front page-content cover-front">
+                        <h1>Sonia & Andrei</h1>
+                        <div class="cover-decoration">❤️</div>
+                        <p class="subtitle">O carte doar pentru noi doi</p>
+                        <button class="next-btn" onclick="turnPage(1)">Deschide Cartea ➡</button>
+                    </div>
+                    <div class="back page-content">
+                        <h2>Prima noastră ieșire...</h2>
+                        <p>Totul a inceput simplu, si usor, nu a fost nimic fortat ceea ce m a facut sa ma indragostesc
+                            pana peste cap de tine de la inceput</p>
+                        <p>Când mă uit la pozele astea din prima zi, văd cât de mult am crescut amândoi și cât de
+                            frumoasa
+                            este povestea noastră.</p>
+                        <div class="decorative-line"></div>
+                        <p class="date">Primele amintiri impreuna.</p>
+                    </div>
+                </div>
+
+                <!-- Foaia 2 : Prima noastra iesire -->
+                <div class="page" id="leaf2">
+                    <div class="front page-content">
+                        <h2 style="margin-bottom: 5px;">Așa am început</h2>
+                        <div class="double-polaroid-container">
+                            <div class="polaroid polaroid-tilt-left small-polaroid">
+                                <img src="poza6.jpeg" alt="Poza 6" class="memory-img small-img" id="img6">
+                            </div>
+                            <div class="polaroid polaroid-tilt-right small-polaroid">
+                                <img src="poza7.jpeg" alt="Poza 7" class="memory-img small-img" id="img7">
+                                <div class="caption">09.IX.2025</div>
+                            </div>
+                        </div>
+                        <div class="page-controls">
+                            <button class="prev-btn" onclick="turnBack(1)">⬅ Înapoi</button>
+                            <button class="next-btn" onclick="turnPage(2)">Următoarea ➡</button>
+                        </div>
+                    </div>
+                    <div class="back page-content">
+                        <h2>Povestea Noastră...</h2>
+                        <p>Aici voiam să las ceva drăguț scris pentru tine. Sincer, nici nu prea știu cum să încep.</p>
+                        <p>Când mă uit înapoi la toate momentele noastre, îmi dau seama cât de norocos sunt să te am.
+                            Ești cel mai bun lucru care mi s-a întâmplat.</p>
+                        <div class="decorative-line"></div>
+                        <p class="date">De la prima noastră ieșire până la o gramada de amintiri împreună.</p>
+                    </div>
+                </div>
+
+                <!-- Foaia 3 : Primele Ierni -->
+                <div class="page" id="leaf3">
+                    <div class="front page-content">
+                        <h2>Primul Craciun</h2>
+                        <div class="polaroid">
+                            <img src="poza5.jpg" alt="Poza 5" class="memory-img" id="img5">
+                            <div class="caption">19.XII.2025</div>
+                        </div>
+                        <div class="page-controls">
+                            <button class="prev-btn" onclick="turnBack(2)">⬅ Înapoi</button>
+                            <button class="next-btn" onclick="turnPage(3)">Următoarea ➡</button>
+                        </div>
+                    </div>
+                    <div class="back page-content text-page">
+                        <p>Încă de la început am simțit că între noi e ceva ce nu se întâlnește la tot pasul. Ne-am
+                            învățat unul pe altul cu răbdare, trecând prin toate, de la primele emoții până la
+                            maturitatea de azi..</p>
+                        <br>
+                        <p>Aici este o amintire de când ne-am împăcat si am decis sa ne continuam povestea impreuna, cum
+                            eram inainte</p>
+
+                        <p class="date">Pacat ca nu a fost noro aici)).</p>
+                    </div>
+                </div>
+
+                <!-- Foaia 4 : In bataia fulgilor -->
+                <div class="page" id="leaf4">
+                    <div class="front page-content">
+                        <h2>Un nou inceput</h2>
+                        <div class="polaroid">
+                            <img src="poza1.jpg" alt="Poza 1" class="memory-img" id="img1">
+                            <div class="caption">23.I.2026</div>
+                        </div>
+                        <div class="page-controls">
+                            <button class="prev-btn" onclick="turnBack(3)">⬅ Înapoi</button>
+                            <button class="next-btn" onclick="turnPage(4)">Următoarea ➡</button>
+                        </div>
+                    </div>
+                    <div class="back page-content text-page">
+                        <p>Îmi aduc aminte cu drag și acum de momentele astea minunate ale noastre. Mă uit la pozele
+                            noastre și realizez cât de mult contează clipele astea mici pentru mine care imi amintesc ca
+                            locul meu preferat este langa tine.</p>
+
+
+                    </div>
+                </div>
+
+                <!-- Foaia 5 : Momente de liniste -->
+                <div class="page" id="leaf5">
+                    <div class="front page-content">
+                        <h2>Locul meu preferat</h2>
+                        <div class="polaroid">
+                            <img src="poza2.jpg" alt="Poza 2" class="memory-img" id="img2">
+                            <div class="caption">12.II.2026</div>
+                        </div>
+                        <div class="page-controls">
+                            <button class="prev-btn" onclick="turnBack(4)">⬅ Înapoi</button>
+                            <button class="next-btn" onclick="turnPage(5)">Următoarea ➡</button>
+                        </div>
+                    </div>
+                    <div class="back page-content text-page">
+                        <br>
+                        <p>Nu contează neapărat unde suntem sau ce facem, ci faptul că suntem împreună. Tu ești "acasă"
+                            pentru mine.</p>
+                        <div class="hearts-illustration">💕</div>
+                    </div>
+                </div>
+
+                <!-- Foaia 6 : Zambete de iarna -->
+                <div class="page" id="leaf6">
+                    <div class="front page-content">
+                        <h2>Doar noi doi</h2>
+                        <div class="polaroid">
+                            <img src="poza3.jpg" alt="Poza 3" class="memory-img" id="img3">
+                            <div class="caption">13.II.2026</div>
+                        </div>
+                        <div class="page-controls">
+                            <button class="prev-btn" onclick="turnBack(5)">⬅ Înapoi</button>
+                            <button class="next-btn" onclick="turnPage(6)">Următoarea ➡</button>
+                        </div>
+                    </div>
+                    <div class="back page-content text-page">
+                        <p>Te iubesc, Sonia!</p>
+                        <br>
+                        <p>Mai mult ca ieri, dar clar mai puțin ca mâine! ❤️</p>
+                        <div class="hearts-illustration">✨</div>
+                    </div>
+                </div>
+
+                <!-- Foaia 7 : Incheiere / Coperta Spate -->
+                <div class="page" id="leaf7">
+                    <div class="front page-content">
+                        <h2>Viitorul nostru</h2>
+                        <p class="final-text">Și povestea continuă... Abia aștept să umplem cartea cu amintiri.</p>
+                        <div class="polaroid small">
+                            <img src="poza4.jpg" alt="Poza 4" class="memory-img" id="img4">
+                            <div class="caption">20.II.2026</div>
+                        </div>
+                        <div class="page-controls">
+                            <button class="prev-btn" onclick="turnBack(6)">⬅ Înapoi</button>
+                            <button class="next-btn" onclick="turnPage(7)">Următoarea ➡</button>
+                        </div>
+                    </div>
+                    <div class="back page-content cover-back">
+                        <div class="cover-decoration">💓</div>
+                        <h3>Facut cu dragoste pentru iubirea mea</h3>
+                        <br><br>
+                        <button class="next-btn" onclick="resetBook()">De la început ↺</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Instructions for user to add photos -->
+    <div class="photo-instructions">
+        <p>Apasă pe scrisoarea 💌 din colțul dreapta-sus pentru o surpriză!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
